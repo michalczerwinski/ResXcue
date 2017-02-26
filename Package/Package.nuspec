@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ResXcue</id>
+    <version>1.0.0</version>
+    <authors>michal.czerwinski</authors>
+    <owners>michal.czerwinski</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Reformat, sort and remove comments from ResX files</description>
+    <releaseNotes>Initial version</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>ResX Resources Localization Sort Clean Reformat</tags>
+  </metadata>
+</package>

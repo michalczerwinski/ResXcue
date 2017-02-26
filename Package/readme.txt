@@ -1,8 +1,10 @@
-# About ResXue
+About ResXue
+============
 ResXue stands for Rescue for ResX and its goal is to solve the most pesky issues with ResX format.
 
 
-# Why?
+Why?
+===
 ResX was introduced together with .NET Framework 1.1 in 2003 and except for minor details hasn't really changed from this time. 
 
 Although it allows for storing localized text in .NET assemblies there are many issues making ResX challenging for every day use:
@@ -12,7 +14,8 @@ Although it allows for storing localized text in .NET assemblies there are many 
 * and to top it all of the attribute xml:space="preserve" is repeated for all data and metadata nodes!
 
 
-# ResXue
+ResXue
+======
 By installing this nuget package you simply introduce a new msbuild target which will reformat every resx file in the projects so that:
 * all unnecessary header lines will be removed
 * all ResX entries are combined to one line
