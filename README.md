@@ -164,3 +164,6 @@ And this is a version after ResXcue:
 	<data name="UserLoginIsAlreadyInUseMessage"><value>User login is already taken</value></data>
 </root>
 ```
+
+# Summary
+I know. This is just a work-around. The truth is that resx file format should be redesigned from scratch. If you agree just leave your vote here: https://visualstudio.uservoice.com/forums/121579-visual-studio-ide/suggestions/18456256-redesign-the-resx-format-sort-in-alphabetical-ord
