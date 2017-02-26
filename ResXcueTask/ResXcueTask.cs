@@ -98,7 +98,7 @@ namespace ResXcueTask
 
             reformatted.AppendLine();
 
-            var maxNameLength = dataElements.Max(d => d.Attribute("name")?.Value.Length ?? 0);
+            var maxNameLength = dataElements.Any() ? dataElements.Max(d => d.Attribute("name")?.Value.Length ?? 0) : 0;
 
             foreach (var dataElement in dataElements.OrderBy(d => d.Attribute("name")?.Value))
             {
