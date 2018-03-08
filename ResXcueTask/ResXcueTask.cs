@@ -53,7 +53,7 @@ namespace ResXcueTask
                 return;
             }
 
-            if (IsAlreadyReformatted(xml))
+            if (IsAlreadyReformatted(fileName))
             {
                 Log.LogMessage($"File {fileName} was already processed, skipping");
                 return;
@@ -116,9 +116,15 @@ namespace ResXcueTask
             return reformatted.ToString();
         }
 
-        private static bool IsAlreadyReformatted(XDocument xml)
+        private static bool IsAlreadyReformatted(string fileName)
         {
-            return xml?.Root != null && xml.Root.Nodes().All(d => !(d is XComment));
+            var lines = File.ReadLines(fileName).ToList();
+            //Check whether the last line contains only the closing root element. If not, formatting is needed
+            if (lines.Last() != "</root>")
+                return false;
+
+            //Check whether all comments are removed. If not, formatting is needed
+            return !lines.Any(l => l.Contains("<!--"));
         }
     }
 }
